@@ -2,7 +2,8 @@
 
 int main() {
 	printf("Hello World");
-	//여기는 주석입니다.
-
+	// 여기는 주석입니다.
+	// this is a comment.
 	return 0;
 }
+	
