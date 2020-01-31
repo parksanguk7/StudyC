@@ -6,8 +6,14 @@
 #include <stdlib.h>
 
 int main() {
-	printf("Hello World");
+	printf("Hello World\n");
+	printf("Hi\tsecond again\n");
+	printf("My\tfriend\n");
 
+	printf("Goot\bd\tchance\n");
+
+	printf("Cow\rW\a\n");
+	
 	// type here
 
 	
