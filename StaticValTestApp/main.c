@@ -65,5 +65,5 @@ int* sum(int a, int b)
 
     res = a + b;
     
-    return &res//결과 보내기
+    return &res;//결과 보내기
  }

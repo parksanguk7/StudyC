@@ -23,7 +23,7 @@ int main(void)
             printf("%c",pa[i][i]);
     }*/
 
-    int a
+    int a;
     
     
     

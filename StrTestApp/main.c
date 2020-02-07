@@ -121,8 +121,8 @@ int main(void)
             else
 
                 printf("%s\n", str1);*/
-        }
-    }
+    //    }
+    //}
     
     system("pause");
     return EXIT_SUCCESS;

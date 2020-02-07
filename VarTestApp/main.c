@@ -33,8 +33,8 @@ int a;
     printf("±³È¯ÈÄ %d, %d\n", a, b);
     
 	system("pause");
-	return EXIT_SUCCESS;*/
-}
+	return EXIT_SUCCESS;
+}*/
 
 int main(void) {
 
