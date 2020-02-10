@@ -90,5 +90,23 @@ int main(void)
 
     printf("head->num:%d\n", head->num);
     printf("head->next->num:%d\n", head->next->num);
+    printf("head->next:%p\n", head->next);
+    printf("a.next : %p\n", a.next);
+    printf("b address :%p, &b");
+
+
+    printf("list all:");
+    current = head;
+    while (current != NULL)
+    {
+        printf("%5d", current->num);
+        current = current->next;
+
+    }
+
+    printf("\n");
+
+    
+    return 0;
 
 }
