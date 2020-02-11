@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "Point.h"
+#include "point.h"
 #include "line.h"
 
 // 메인함수
@@ -22,7 +22,7 @@ int main(void)
 
     b.x = (a.first.x + a.second.x) / 2;
     b.y = (a.first.y + a.second.y) / 2;
-    printf("선의 가운데 점 좌표 : (%d")
+    printf("선의 가운데 점 좌표 : (%d");
 	
 	system("pause");
 	return EXIT_SUCCESS;
