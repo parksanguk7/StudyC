@@ -1,4 +1,4 @@
-/*
+ /*
   filename - main.c
   version - 1.0
   description - 기본 메인 함수,사용자 정의 자료형structure 학습
