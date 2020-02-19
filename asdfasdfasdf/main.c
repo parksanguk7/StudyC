@@ -229,9 +229,9 @@ int main(void)
         }
     }
     return 0;
-}*/
+}
 
-int main(void)
+int main(void)//소수
 {
     in i,j,count=1;
     
@@ -256,4 +256,227 @@ int main(void)
     }
 
     return 0;
+}
+
+int main(void)
+{
+    int a, b, result;
+
+    printf("단을 입력하세요:\n");
+    scanf("%d", &a);
+
+    for (b = 1; b < 10; b++)
+    {
+
+
+        result = (a * b);
+
+        printf("%d단 : %d * %d = %d\n", a, a, b, result);
+    }
+    return 0;
+}
+
+
+typedef int element;
+int size;
+
+void SelectionSort(int a[], int size) {
+
+    int i, j, t, min;
+    element temp;
+    printf("\n정렬한 원소:");
+    for (t = 0; t < size; t++) printf("%d", a[t]);
+    printf("\n----------선택정렬수행-----------\n");
+    for (i = 0; i < size; i++) {
+        min = i;
+        for (j = i + 1; j < size; j++) {
+            if (a[j] < a[min]) min = j;
+        }
+        temp = a[i];
+        a[i] = a[min];
+        a[min] = temp;
+
+        printf("\n%d단계", i + 1);
+        for (t = 0; t < size; t++) printf("%3d", a[t]);
+    }
+}
+
+    void main() {
+        element list[8] = { 69,10,30,2,16,8,31,22 };
+    size = 8;
+    SelectionSort(list, size);
+
+    getchar();
+}
+typedef int element;
+int size;
+
+void bubbleSort(element a[], int size) {
+    int i, j, t;
+    element temp;
+    printf("\n정렬할 원소: ");
+    for (t = 0; t < size; t++) printf("%d", a[t]);
+    printf("\n-----------버블 정렬 수행----------");
+    for (i = size - 1; i > 0; i--) {
+        printf("\n %d단계>>", size - i);
+        for (j = 0; j < i; j++) {
+            if (a[j] > a[j + 1]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+            printf("\n\t");
+            for (t = 0; t < size; t++) printf("%3d", a[t]);
+        }
+    }
+}
+
+void main() {
+    element list[8] = { 69,10,30,2,16,8,31,22 };
+    size = 8;
+    bubbleSort(list, size);
+    getchar();
+}
+
+typedef int element;
+int size, i = 0;
+
+int partition(element a[], int begin, int end)
+{
+    int pivot, L, R, t;
+    element temp;
+    L = begin;
+    R = end;
+    pivot = (int)((begin + end) / 2.0);
+
+    printf("\n [%d단계 : pivot = %d]\n", ++i, a[pivot]);
+    while (L < R) {
+        while ((a[L] < a[pivot]) && (L < R)) L++;
+        while ((a[R] >= a[pivot]) && (L < R)) R--;
+        if (L < R) {
+            temp = a[L];
+            a[L] = a[R];
+            a[R] = temp;
+
+            if (L == pivot)
+                pivot = R;
+        }
+    }
+
+    temp = a[pivot];
+    a[pivot] = a[R];
+    a[R] = temp;4*
+    for (t = 0; t < size; t++) printf("%d", a[t]);
+    printf("\n");
+    return R;
+}
+
+void quickSort(element a[], int begin, int end) {
+    int p;
+    if (begin < end) {
+        p = partition(a, begin, end);
+        quikSort(a, begin, p - 1);
+        quickSort(a, p + 1, end);
+    }
+}
+void main() {
+    element list[8] = { 69,10,30,2,16,8,31,22 };
+    size = 8;
+    printf("\n[초기상태]\n");
+    for (int i = 0; i <= size - 1; i++) printf("%d", list[i]);
+    printf("\n");
+
+    getchar();
+
+}
+
+typedef int element;
+
+int partition(element a[], int begin, int end)
+{
+
+    int pivot, L, R, t;
+    element temp;
+
+    int arry[4];
+    int p;
+    int score;
+
+    L = begin;
+    R = end;
+    pivot = (int)((begin + end) / 2.0);
+
+    printf("점수는:?\n");
+    scanf("%d", score);
+
+
+    While(L < R) {
+        while ((a[L] < a[pivot]) && (L < R)) L++;
+        while ((a[R] >= a[pivot] && (L < R))) R--;
+        if (L < R) {
+            temp = a[L];
+            a[L] = a[R];
+            a[R] = temp;
+
+            if (L == pivot)
+                pivot = R;
+        }
+    }*/
+
+
+
+
+
+
+int main (void) 
+{
+
+    char c;
+    int b = 0, s = 0, n = 0, p = 0;
+
+    while (1)
+    {
+        scanf("%c", &c);
+
+        if (c >= '0' && c <= '9')
+        {
+            n++;
+        }
+        else if (c >= 'a' && c <= 'z')
+        {
+            s++;
+        }
+        else if (c >= 'A' && c <= 'Z')
+        {
+            b++;
+        }
+        else if (c >= 33 && c <= 64)
+        {
+            p++;
+        }
+        else if (c >= 58 && c <= 64)
+        {
+            p++;
+        }
+        else if (c >= 91 && c <= 96)
+        {
+            p++;
+        }
+        else if (c >= 123 && c <= 126)
+        {
+            p++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    printf("대문자 : %d\n", b);
+    printf("소문자 : %d\n", s);
+    printf("숫자 : %d\n", n);
+    printf("특수문자 : %d\n",p );
+
+    system("puase");
+    return EXIT_SUCCESS;
+
 }
